@@ -1,0 +1,26 @@
+﻿Build started 6/18/2017 8:54:46 PM.
+     1>Project "C:\Users\becks\OneDrive\documents\visual studio 2012\Projects\practic\practic\practic.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\becks\onedrive\documents\visual studio 2012\projects\practic\practic\main.cpp(67): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>c:\users\becks\onedrive\documents\visual studio 2012\projects\practic\practic\main.cpp(180): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\users\becks\onedrive\documents\visual studio 2012\projects\practic\practic\main.cpp(230): warning C4101: 'bucky1' : unreferenced local variable
+     1>c:\users\becks\onedrive\documents\visual studio 2012\projects\practic\practic\main.cpp(225): warning C4101: 'cc' : unreferenced local variable
+     1>c:\users\becks\onedrive\documents\visual studio 2012\projects\practic\practic\main.cpp(223): warning C4101: 'c1' : unreferenced local variable
+     1>c:\users\becks\onedrive\documents\visual studio 2012\projects\practic\practic\main.cpp(227): warning C4101: 'c2' : unreferenced local variable
+     1>c:\users\becks\onedrive\documents\visual studio 2012\projects\practic\practic\header.h(119): warning C4244: 'return' : conversion from 'double' to 'int', possible loss of data
+                 c:\users\becks\onedrive\documents\visual studio 2012\projects\practic\practic\main.cpp(74) : see reference to function template instantiation 'first smaller<int,double>(first,second)' being compiled
+                 with
+                 [
+                     first=int,
+                     second=double
+                 ]
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\becks\OneDrive\documents\visual studio 2012\Projects\practic\Debug\practic.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\boost_1_53_0\stage\lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\becks\OneDrive\documents\visual studio 2012\Projects\practic\Debug\practic.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\becks\OneDrive\documents\visual studio 2012\Projects\practic\Debug\practic.lib" /MACHINE:X86 Debug\main.obj
+         practic.vcxproj -> C:\Users\becks\OneDrive\documents\visual studio 2012\Projects\practic\Debug\practic.exe
+     1>Done Building Project "C:\Users\becks\OneDrive\documents\visual studio 2012\Projects\practic\practic\practic.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.26
