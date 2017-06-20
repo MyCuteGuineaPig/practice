@@ -349,6 +349,7 @@ int main()
 	// future class to is get something in the future
 	//async may or may not be get thread; std::future<int> fu = std::async(std::launch::deferred,factorial_7,4);
 	//上面的执行直到get function get called
+	//当deferred function被called,会在同一个thread 运行，不会create 新的thread， async 会create a new thread
 	// it will get another thread std::future<int> fu = std::async(std::launch::async,factorial_7,4); 
 	// std::future<int> fu = std::async(std::launch::async | std::launch::deferred,factorial_7,4);
 	// wether create a thread or not will determined by the implementation
