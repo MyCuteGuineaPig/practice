@@ -1,9 +1,11 @@
-#include <iostream>
+﻿#include <iostream>
 #include "lesson1.h"
 #include "lesson2.h"
 #include "lesson3.h"
+#include "lesson4UnorderedContainer.h"
+#include "lesson5IteratorsAndAlgorithm.h"
+#include "lesson6Functors.h"
 #include <string.h>
-#include <stdio.h>
 using namespace std;
 
 
@@ -63,4 +65,44 @@ int main(){ // code bloat
 
 	cout<<endl << "--------------------lesson 3 Associate Containers-------------------------------"<<endl;
 	lesson_3();
+
+
+	cout << endl << "--------------------lesson 4 Unordered Associative Containers-------------------------------" << endl;
+	lesson_4();
+
+
+	/*
+		Container Adaptor 
+		- Provide a restricted interface to meet special needs
+		- Impletmented with fundamental container clases
+		1. stack: LIFO push(), pop(), top()
+		2. queue: FIFO push(), pop(), front(),back(), push in the front, pop in the end
+		3. priority queue: first item alwasy has the greatest priority, push(), pop(), top()
+	*/
+
+	/*
+		Another way of categorizing containers:
+		1.Array based containers vector, deque
+		2. Node base containers： list+asscociative containers + unordered containers
+		Array baed containers invalidated pointers:
+		- Native pointers, iterators, reference;
+
+		vector<int> vec = {1,2,3,4};
+		int *p = &vec[2]; // P points to 3
+		vec.insert(vec.begin(),0);
+		cout << *p <<endl; // 2 (new location )or random number or program will crash, undefined behavior 
+		
+
+		everytime you remove something from vector or insert something insert vector
+		the pointer previously pointing to the content of vectors may 失效， 所以不能使用pointer
+		但是nodes 就没有这个问题， pointer 会remain valid even after you have insert or remove from containers 只能不delete point
+
+	*/
+
+	cout << endl << "--------------------lesson 5 Iterators and Algorithms-------------------------------" << endl;
+	lesson_5();
+
+
+	cout << endl << "--------------------lesson 6 Functors-------------------------------" << endl;
+	lesson_6();
 }
