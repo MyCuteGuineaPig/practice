@@ -5,6 +5,15 @@
 #include "lesson4UnorderedContainer.h"
 #include "lesson5IteratorsAndAlgorithm.h"
 #include "lesson6Functors.h"
+#include "lesson7NonModifyAlgorithm.h"
+#include "Lesson8ModifyingAlgorithm.h"
+#include "lesson9sorting.h"
+#include "lesson11string.h"
+#include "lesson12AccessStringCharacters.h"
+#include "lesson13StringMemberFunction.h"
+#include "lesson14NonmemberFunctions.h"
+#include "lesson15StringAndAlgorithms.h"
+#include "lesson16Stream.h"
 #include <string.h>
 using namespace std;
 
@@ -105,4 +114,32 @@ int main(){ // code bloat
 
 	cout << endl << "--------------------lesson 6 Functors-------------------------------" << endl;
 	lesson_6();
+
+	cout << endl << "--------------------lesson 7 Non Modified Algorithm-------------------------------" << endl;
+	lesson_7();
+
+	cout << endl << "--------------------lesson 8 Modifying Algorithm-------------------------------" << endl;
+	lesson_8();
+
+	cout << endl << "--------------------lesson 9 Sorting-------------------------------" << endl;
+	lesson_9();
+
+
+	cout << endl << "--------------------lesson 11 string class-------------------------------" << endl;
+	lesson_11();
+
+	cout << endl << "--------------------lesson 12 access string characters-------------------------------" << endl;
+	lesson_12();
+
+	cout << endl << "--------------------lesson 13 String Member Function Algorithm-------------------------------" << endl;
+	lesson_13();
+
+	cout << endl << "--------------------lesson 14 Non-member Functions-------------------------------" << endl;
+	lesson_14();
+
+	cout << endl << "--------------------lesson 15 String and Algorithm-------------------------------" << endl;
+	lesson_15();
+
+	cout << endl << "--------------------lesson 16 Stream-------------------------------" << endl;
+	lesson_16();
 }

@@ -38,7 +38,7 @@ void lesson_2(){
 	cout << vec.at(2)<<endl; // 8 throw range_error exception of out of range
 
 	//traverse vector
-	for (int i=0; i<vec.size();i++)
+	for (unsigned i=0; i<vec.size();i++)
 		cout << vec[i] << " ";
 
 	for (vector<int>::iterator itr = vec.begin(); itr!=vec.end(); itr++)
