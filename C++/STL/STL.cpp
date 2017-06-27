@@ -6,7 +6,7 @@
 #include "lesson5IteratorsAndAlgorithm.h"
 #include "lesson6Functors.h"
 #include "lesson7NonModifyAlgorithm.h"
-#include "Lesson8ModifyingAlgorithm.h"
+#include "lesson8ModifyingAlgorithm.h"
 #include "lesson9sorting.h"
 #include "lesson11string.h"
 #include "lesson12AccessStringCharacters.h"
@@ -14,6 +14,12 @@
 #include "lesson14NonmemberFunctions.h"
 #include "lesson15StringAndAlgorithms.h"
 #include "lesson16Stream.h"
+#include "lesson17FileStreamAndErrorHandling.h"
+#include "lesson18FormattedAndUnformattedIO.h"
+#include "lesson19Manipulators.h"
+#include "lesson20StreamBuffer.h"
+#include "lesson21StringStream.h"
+#include "lesson22EnableStringForYourOwnClass.h"
 #include <string.h>
 using namespace std;
 
@@ -142,4 +148,23 @@ int main(){ // code bloat
 
 	cout << endl << "--------------------lesson 16 Stream-------------------------------" << endl;
 	lesson_16();
+
+	cout << endl << "--------------------lesson 17 File Stream and Error Handling-------------------------------" << endl;
+	lesson_17();
+
+	cout << endl << "--------------------lesson 18 Formatted and Unformatted IO------------------------------" << endl;
+	lesson_18();
+
+	cout << endl << "--------------------lesson 19 Manipulators------------------------------" << endl;
+	lesson_19();
+
+	cout << endl << "--------------------lesson 20 Stream Buffer------------------------------" << endl;
+	lesson_20();
+
+	cout << endl << "--------------------lesson 21 String Stream------------------------------" << endl;
+	lesson_21();
+
+	cout << endl << "--------------------lesson 22 Enable Streaming for your Own Class------------------------------" << endl;
+	lesson_22();
+
 }
