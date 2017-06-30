@@ -22,6 +22,25 @@ int main() {
 	cout << "-----------------------lesson 3 Logic Constness And Bitwise Constness--------------------------------------" << endl;
 	lesson_3();
 
+	cout <<endl<< "-----------------------lesson 4 Complier generated function--------------------------------------" << endl;
+	lesson_4();
+
+	cout << endl << "-----------------------lesson 5 Disallow Function--------------------------------------" << endl;
+	lesson_5();
+
+	cout << endl << "-----------------------lesson 6 Virtual Destructor and smart Destructor--------------------------------------" << endl;
+	lesson_6();
+
+	cout << endl << "-----------------------lesson 7 Exceptions from leaving Destructors--------------------------------------" << endl;
+	lesson_7();
+
+	cout << endl << "-----------------------lesson 8 Virtual Function in Constructor or Destructor--------------------------------------" << endl;
+	lesson_8();
+
+	cout << endl << "-----------------------lesson 9 Assignment to self in Assignment Operator--------------------------------------" << endl;
+	lesson_9();
+
+
 	return 0;
 }
 
