@@ -40,7 +40,7 @@ class dog {
 	public:
 		dog(const dog& rhs) {}; // Member by Member initilization
 
-		dog & operator = (const dog&rhs) {}; // member by member copy
+		//dog & operator = (const dog&rhs) {}; // member by member copy
 		// what if function fails to do their jobs, rem
 
 		dog() {}; /// 1. call base class's default constructror;

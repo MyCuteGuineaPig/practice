@@ -67,8 +67,20 @@ int main() {
 	cout << endl << "-----------------------lesson 10 RAII--------------------------------------" << endl;
 	lesson_10();
 
+    cout << endl << "-----------------------lesson 11 Static Initialization Fiasco--------------------------------------" << endl;
+    lesson_11();
+    
+    
+    cout << endl << "-----------------------lesson 12 Struct vs Class--------------------------------------" << endl;
+    lesson_12();
 
-
+    
+    cout << endl << "-----------------------lesson 13 Resource Managing Class--------------------------------------" << endl;
+    lesson_13();
+    
+    cout << endl << "-----------------------lesson 15 Define Implicit Type Conversion--------------------------------------" << endl;
+    lesson_15();
+    
 	return 0;
 }
 
