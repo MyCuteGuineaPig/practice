@@ -162,7 +162,7 @@ class boVector3{
         ~boVector3() {delete arr_;}
 };
 
-//void foo(boVector3 v);
+//void foo(boVector3 v); // take boVector as parameter
 // void foo_by_ref(boVector &v); // if we don't have move constructor, can use pass by value or reference to pass that,very messy
 
 //boVector3 createBoVector(); // Create a boVector
@@ -220,11 +220,14 @@ void lesson_3(){
     printInt(6); // call second function
     
     //boVector3 resuable = createBoVector();
-    // foo(resuable); // invoke copy constructor
+    // foo(resuable); //resuable是lvalue invoke copy constructor. 之后用copy的resuable再pass to function foo
+    //foo_by_ref(createBovector()) createBovector()会return 一个rvalue
+    
     // foo(std::move(reusable));  move reusable to foo function // resuable.arr = nullptr by moving, you should not call reuseable one more
+    // move 会pass to move constructor
     
     //
-    // foo_by_ref(reuseable); // call no constructor 最efficient
+    // foo_by_ref(reuseable); // call no constructor 通过pass by reference 最efficient
     // foo(resuable) ; call copy constructor 最expensive 的
     // foo_by_ref(createBovector()); call move constructor;
     // resuable is distroyed here
