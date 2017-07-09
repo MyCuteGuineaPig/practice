@@ -237,22 +237,4 @@ void lesson_3(){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #endif /* lesson3Rvalue_Reference_h */

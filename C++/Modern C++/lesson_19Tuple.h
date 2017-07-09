@@ -107,18 +107,4 @@ void lesson_19(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #endif /* lesson_19Tuple_h */

@@ -75,10 +75,6 @@ void lesson_18(){
     for(int i=0;i<20; i++)
         cout << i << " : "<<std::string(v[i],'*')<<endl;
     cout << endl;
-    
-    
-    
-    
 
 }
 

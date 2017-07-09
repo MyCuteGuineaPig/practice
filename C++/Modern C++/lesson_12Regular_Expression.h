@@ -121,22 +121,4 @@ void lesson_12(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #endif /* lesson_12Regular_Expression_h */
