@@ -81,6 +81,18 @@ int main() {
     cout << endl << "-----------------------lesson 15 Define Implicit Type Conversion--------------------------------------" << endl;
     lesson_15();
     
+    
+    cout << endl << "-----------------------lesson 19 Maintain is a-relation for public Inheritance--------------------------------------" << endl;
+    lesson_19();
+    
+    cout << endl << "-----------------------lesson 22 Static Polymorphism--------------------------------------" << endl;
+    lesson_21();
+    
+    
+    cout << endl << "-----------------------lesson 26 Koeing Lookup -Agrument Dependent Lookup--------------------------------------" << endl;
+    lesson_21();
+   
+    
 	return 0;
 }
 
