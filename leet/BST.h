@@ -104,5 +104,67 @@ TreeNode* invertTree(TreeNode* root) {
 
 
 
+/****************merge two binary tree*******/
+//recurssion
+TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2) {
+    if ( t1 && t2 ) {
+        TreeNode * root = new TreeNode(t1->val + t2->val);
+        root->left = mergeTrees(t1->left, t2->left);
+        root->right = mergeTrees(t1->right, t2->right);
+        return root;
+    } else {
+        return t1 ? t1 : t2;
+    }
+}
+
+
+//iteration
+TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2) {
+    if(!t1) return t2;
+    else if(!t2) return t1;
+    queue<TreeNode *>q1,q2;
+    q1.push(t1);
+    q2.push(t2);
+    while(q1.size()){
+        for(int i=0; i<q1.size(); i++){
+            q1.front()->val += q2.front()->val;
+            if(q1.front()->left && q2.front()->left) {
+                q1.push(q1.front()->left);
+                q2.push(q2.front()->left);
+            }
+            else if((!q1.front()->left) && q2.front()->left)
+                q1.front()->left = q2.front()->left;
+            if(q1.front()->right && q2.front()->right) {
+                q1.push(q1.front()->right);
+                q2.push(q2.front()->right);
+            }
+            else if((!q1.front()->right) && q2.front()->right)
+                q1.front()->right = q2.front()->right;
+            q1.pop();
+            q2.pop();
+        }
+    }
+    return t1;
+}
+
+
+
+/**************606 Construct string from binary tree ****************/
+//recurssion
+string tree2str(TreeNode* t) {
+    if (!t) return "";
+    string s = to_string(t->val);
+    if(t->left) s += "("+tree2str(t->left)+")";
+    else if(t->right) s+= "()";
+    if(t->right) s += "("+tree2str(t->right)+")";
+    return s;
+}
+
+
+
+
+
+
+
 
 
