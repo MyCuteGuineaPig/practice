@@ -21,6 +21,7 @@ __3__. Install library via vcpkg
 
 ```
 > cd vcpkg
-PS> vcpkg install cpprestsdk cpprestsdk:x64-windows
+PS> .\vcpkg install cpprestsdk cpprestsdk:x64-windows
+PS> .\vcpkg install boost:x86-windows
 ```
 
