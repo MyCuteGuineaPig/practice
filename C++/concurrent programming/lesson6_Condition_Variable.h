@@ -22,7 +22,7 @@
     一旦有condition variable 唤醒它，会继续lock locker，继续剩下的任务
  
     condition_variable 也可以用lambda function来决定是继续还是睡眠，要是符合lambda function就继续，不符合就进入睡眠
-    cond.wait([locker,[](){return !q.empty();});
+    cond.wait(locker,[](){return !q.empty();});
 
  */
 
