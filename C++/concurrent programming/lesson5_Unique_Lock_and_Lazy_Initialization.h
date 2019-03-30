@@ -45,7 +45,8 @@ public:
     }
     
     void shared_print2(string id, int value){
-        call_once(_flag,[&](){f.open("log.txt");}); // file will be opened only once by one
+        call_once(_flag,[&](){f.open("log.txt");}); // file will be opened only once by one， 如果放在constructor是被cal 一次了，
+        //但是假如shared_print2 没有被call，then have open file for nothing
         unique_lock<mutex>locker(m_mutex);
         locker.lock();
         f << "From "<<id << " : "<<value << endl;
