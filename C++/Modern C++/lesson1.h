@@ -44,6 +44,13 @@ void foo(char *pc) {cout << "foo_char*"<<endl;}
 
 void lesson_1(){
     /*
+        C++ 03 Initializer list 
+        int arr[4] = {3,2,4,5};
+        
+        C++ extended the support 
+        vector<int> = {3,4,1,9};//calling initializer_list constructor
+        All the relevant STL containers have been updated to accetp initializer_list
+        
         vector<int>v;
         v.push_back(3);
         v.push_back(2);
