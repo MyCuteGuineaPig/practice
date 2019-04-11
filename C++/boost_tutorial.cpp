@@ -11,6 +11,12 @@
 using namespace std;
 
 /*
+Disadvantage: 
+	not possible to remember of all function (some begin with a, some begin with s) 
+	convert to string: using stringstream or sscanf(but not safe) 
+
+Boost provide safe and convenient way to do the conversion from and to the text format
+
 convet from string 
 	atof     Convert string to double (function)
 	atoi     Convert string to integer
@@ -29,6 +35,32 @@ convet from string
 	strm << int_val;
 	string s = strm.str();
 	inefficient
+	
+union {int i; float f;} u; // then the same storage flow can be saved as intger or flow
+but not both at the same time
+
+ the problem of union works must be plain of all data
+ 比如 union{int i; string f}u; //会报错的, not compiled
+ 
+ variant: like union in C++
+ boost::variant<int, string>u1, u2; //us store int, u2 string
+ 不能是 u1*=2; 因为* 没有overload for operator *
+ 需要get function:   u1 = boost::get<int>(u1)*2 //make sure int not wrong for the type
+ string st = boost::get<string>(u1); //throw exception of bad_get 
+ 
+ u1 = "good"; //u1 become string
+ u1 = 32; // u1 become int 
+ can used for different type of data at different time
+ 
+ variant can be only to stored limited number of data,  //use static storage
+ any can be used to store any type of data //use dynamic storage
+ variant 更加efficient 对于memory, 
+ but 不能用cout << 来print any variable, it is not overloaded, 需要any_cast<char>(y);
+ 
+ difference between any_cast and get:
+ Get the reference of data. any_cast get the copy of the data
+
+ 
 */
 class DoubleVistor: public boost::static_visitor<>
 {
