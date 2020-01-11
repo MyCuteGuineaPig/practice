@@ -30,7 +30,7 @@ PS> .\vcpkg install boost:x86-windows
 
 插网线！
 
-1. 打开terminal 
-2. sudo su
-3. sudo apt-get update
-4. sudo apt-get --reinstall install bcmwl-kernel-source
+**1.** 打开terminal 
+**2.** sudo su
+**3.** sudo apt-get update
+**4.** sudo apt-get --reinstall install bcmwl-kernel-source
