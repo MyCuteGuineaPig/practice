@@ -14,6 +14,9 @@ data1 文件里记录是一些命令的操作记录，现在需要你从里面�
 Answer: 
 ```shell
 cat data1 |cut -c 8-|sort|uniq -dc|sort -rn -k1 |head -3 > /home/shiyanlou/result
+
+#or
+cut data1 -c 8-|sort|uniq -dc|sort -rn -k1 |head -3 > /home/shiyanlou/result
 ```
 
 来源： 2016 年百度校招面试题
