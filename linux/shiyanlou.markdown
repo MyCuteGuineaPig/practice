@@ -15,3 +15,5 @@ Answer:
 ```shell
 cat data1 |cut -c 8-|sort|uniq -dc|sort -rn -k1 |head -3 > /home/shiyanlou/result
 ```
+
+来源： 2016 年百度校招面试题
