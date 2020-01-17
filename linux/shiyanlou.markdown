@@ -50,3 +50,15 @@ cat /home/shiyanlou/data2  | grep '^[0-9]'  > /home/shiyanlou/num
 grep -E '^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(.[a-zA-Z0-9_-]+)+$' /home/shiyanlou/data2 > /home/shiyanlou/mail
 
 ```
+
+## 3.  
+
+新建一个 cleantest.sh 脚本运行实现清空 test.sh 里的内容
+
+```bash
+$ touch /home/shiyanlou/cleantest.sh
+$ cat > /home/shiyanlou/cleantest.sh << EOF
+#!/bin/bash
+cat /dev/null > test.sh
+EOF
+```
