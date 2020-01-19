@@ -155,5 +155,38 @@ do
 done
 ```
 
+## 6. 三个数中最大数
+
+```bash
+a=8
+b=4
+c=5
+maxn=$a
+for i in $b $c
+do 
+  if [[ $i>$maxn ]]
+  then 
+    maxn=$i #maxn 不加$
+  fi
+done
+```
+
+Solution 2:
+
+```bash
+#!/bin/bash
+max=0
+a=8
+b=4
+c=5
+for i in $a $b $c
+do 
+  if [ $i -gt $max ]
+  then 
+    max=$i
+  fi
+done
+echo $max
+```
 
 
