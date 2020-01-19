@@ -62,3 +62,98 @@ $ cat > /home/shiyanlou/cleantest.sh << EOF
 cat /dev/null > test.sh
 EOF
 ```
+
+
+## 4. 
+
+写一个Bash脚本
+
+(1) 提示用户输入一个字符串；
+
+(2) 判断：
+
+如果输入的是quit，则退出脚本；
+
+否则，则显示其输入的字符串内容；
+
+```bash
+#!/bin/bash
+
+read -t 10 -p "Please enter string: " inputStr #-t time out
+# -p  表示继续那行输入 不开启新一行, 
+# 如果没有 -p 会
+# Please enter string
+#  输入值
+
+case $inputStr in
+quit) 
+  exit 1
+  ;; 
+*)
+  echo "$inputStr"
+  ;;
+esac
+```
+
+## 5 三角输出
+
+写一个Bash脚本, 画出
+```
+    *
+   * *
+  * * *
+ * * * *
+* * * * *
+```
+
+Solution 1: 
+
+```bash
+line=15
+for(( i=1; i<=$line; i++ ))
+do 
+    for(( j=1; j<$line; j++ ))
+    do 
+        echo -n " "
+    done
+    for (( j=1; j<=2*i-1; j++ ))
+    do 
+        eho -n "*'
+    done
+    echo 
+done 
+
+```
+
+
+
+Solution 2
+
+```bash
+for((i=1;i<=5;i++))
+do
+
+  spaceNum=$((5-$i))
+  num=$((2*$i-1))
+
+  for ((j=1; j<=$spaceNum; j++))
+  do
+    echo -n ' '
+  done
+
+  for ((k=1; k<=$num; k++))
+  do
+    echo -n '*'
+  done
+
+  for ((l=1; j<=$spaceNum; l++))
+  do
+    echo -n ' '
+  done
+
+  echo ''
+done
+```
+
+
+
