@@ -189,4 +189,31 @@ done
 echo $max
 ```
 
+## 7.求 100 以内所有偶数之和
 
+Solution 1:
+
+```bash
+sum=0
+for(( i=2; i<=100; i+=2 ))
+do 
+     sum=`expr $sum + $i` #注意sum=`expr 之间都不能有空格，否则报错 
+done
+echo "sum for all even numbers from 2 to 100 is $sum"
+```
+
+Solution 2:
+
+```bash
+#!/bin/bash
+cnt=0
+sum=0
+for cnt in `seq 2 2 100`
+do
+  sum=$((cnt+sum))
+done 
+
+echo $sum
+```
+
+```seq 2 2 100``` 表示列出 1 到 100 的所有偶数
