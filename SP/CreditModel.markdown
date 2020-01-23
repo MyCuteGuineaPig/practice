@@ -30,7 +30,7 @@ Finally, all re-evaluations of the out-of-sample evaluted likelihood functions a
 
 比如 k = 18, 把所有数据分成18分，每一份80% train, 20%test, 每一个train 都是独立的，比如train完第一份 然后test, 然后不会在train 完第一份基础上,  独立train 完第二份 然后test. 
 
-这个步骤用于把已经把变量都定好了后，train model 用于 parameter 
+用的评判标准是用match ratio or likelihood 
 
 
 #### Greedy Forward
@@ -44,3 +44,34 @@ The criterion that is applied when chooing how many variables to use AIC(AKaike 
 #### Other Consideration
 
 avoid choosing those variables that show much co-movement or are highly correlated. This is for a statistical reason: model with correlated variables tend to be unstable and tend to underperform on out of sample data. As a result, we group these variables into different categories like profitablility, liquidity, efficiency, coverage ratios and strive to choose variables from different groups.
+
+
+
+#### Regularization 
+
+
+1. The model has large number of parameters relative to number of observed training records. This happen when few observation than number of model parameters
+2. explanatory variables may be highly correlated. 
+
+In either case, maximum likelihood estimation might produce overfitting, good in-sample likelihood, but do not generalize well to out-of-sample data. To avoid such over-fitting problems, we adopt commonly used practice known as L2 regularization. 
+
+Specifically, to fit the models in CreditModel, we find Beta that maximize the following modified likelihood function $$ \left( l \left( \beta \right) \right) - \lambda \sum_k \beta_k^2 $$
+
+where $$\lambda$$ is a model hyper-parameter that controls the balance between log-likelihood function and regularization term $$\sum \beta_k^2 $$ (can also be interpreted as penalizing parameters with large magnitude.)
+
+We find the best $$\lambda$$ using a binary search based on fivefold cross validation on out-of-sample likelihood. We search a pre-specified list of  $$\lambda$$ candidates to find the one whose out-of-sample modfied likelihood is maximized. after we find the best $$\lambda$$, we set the final model parameters to be the associated $$\beta$$
+
+The parameter $$\lambda$$is part of likelihood that is being maximized and influences the choice of the optimal betas, it does not appear in the final formula, $$\lambda$$ 不用于最后的计算credit score, 只用于train model
+
+
+先选取变量, 然后带着regularization 看哪个weight 最后，用所有train data带着
+
+
+
+
+
+
+
+
+
+
