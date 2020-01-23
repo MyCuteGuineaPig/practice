@@ -14,3 +14,9 @@ Note that credit scores reflect the <span style="color:red"> **standalone credit
 or burdens of affiliation, such as support from a parent company or government, or the integration into a holding structure.
 
 CreditModel is effective for publicly traded and privately owned corporate with revenuse above 50 million usd or 10 billion JPY. 
+
+
+#### Reason for Rank Transformation
+
+
+ensure a robous treatment of outliers. To implement rank transformation, using the empirical distribution of the observerd data to transform raw data into standardized variable between 0 and , while keeping the relative rank order the same. Using untransformed financial ratios often results in an underperforming model because the final model is too influenced by outliers and by flawed observations.
