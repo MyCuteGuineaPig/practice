@@ -20,3 +20,10 @@ CreditModel is effective for publicly traded and privately owned corporate with 
 
 
 ensure a robous treatment of outliers. To implement rank transformation, using the empirical distribution of the observerd data to transform raw data into standardized variable between 0 and , while keeping the relative rank order the same. Using untransformed financial ratios often results in an underperforming model because the final model is too influenced by outliers and by flawed observations.
+
+
+#### K-FOLD Out-of-Sample 
+
+To prevent overfitting, model variables and parameter values are first determined by maximizing the likelihood function on a subset of data. Then resulting model's performance is re-evaluated on remaining data set. **K-fold Out-Of-Sample method divides the data set into k separate subsets and the model is fitted and re-ecaluated k times**, with each respective fitting and re-evaluation being associated with one of the subsets and its complement, which is the remainder of the data set.
+
+Finally, all re-evaluations of the out-of-sample evaluted likelihood functions are averaged to obtain an out-of-sample likelihood value. This average out of sample likelihood vlaue for may then be compared to the average out-of-sample likelihood value for other models to see which is better.
