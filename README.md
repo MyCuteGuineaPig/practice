@@ -25,3 +25,15 @@ PS> .\vcpkg install cpprestsdk cpprestsdk:x64-windows
 PS> .\vcpkg install boost:x86-windows
 ```
 
+
+## Linux No Wifi Adaptor 解决办法
+
+插网线！
+
+**1.** 打开terminal 
+
+**2.** ```sudo su```
+
+**3.** ```sudo apt-get update```
+
+**4.** ```sudo apt-get --reinstall install bcmwl-kernel-source```
